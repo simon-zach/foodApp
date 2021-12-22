@@ -13,7 +13,7 @@ const Yelp = {
     }).then(response => {
       if (response){
         return response.json();
-      }
+      }c
       
     })
   }
