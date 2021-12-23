@@ -6,12 +6,12 @@ import Gallery from "./Gallery";
 function Searchbar(yelp){
     const [term, setTerm]=useState();
     const [location, setLocation]=useState();
-    const [restaurants, setRestaurants]=useState();
+    const [restaurants, setRestaurants]=useState({});
 
-        let handleSubmit=(e)=>{
-        console.log(term,location)
-        yelp.yelp(term,location).then(response=>setRestaurants(response))
-        e.preventDefault();
+    let handleSubmit=(e)=>{
+    //console.log(term,location)
+    yelp.yelp(term,location).then(response=>setRestaurants(response))
+    e.preventDefault();
     }
 
     return (
