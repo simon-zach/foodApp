@@ -12,29 +12,30 @@ function Gallery(props){
     let businesses=props.restaurants.businesses;
       for (let k in businesses ){
           console.log (businesses[k]);
-          testArr.push(<GalleryElement key={businesses[k].id} image_url={businesses[k].image_url} alias={businesses[k].alias}></GalleryElement>)
+          if(businesses[k].image_url!==''){
+            testArr.push(<GalleryElement key={businesses[k].id} image_url={businesses[k].image_url} alias={businesses[k].alias}></GalleryElement>)
+          }
+          
       
       }
     
 
         return testArr
-     
-   
     
+   
+
   }
 
 
     return(
     <>
-        <h1>gallery</h1>
-    
-
+        <h1>Gallery</h1>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
             {printGalleryElements(props)}
-           
-        
-        
+        </div>
+                
+            
     
-        
     </>
     )
 }
