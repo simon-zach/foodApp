@@ -34,12 +34,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-       <h1>hello</h1>
-      </header>
-      <Searchbar yelp={Yelp.search}></Searchbar>
-
-    
+      <div className="container">
+        <header className="App-header">
+        <h1>Find your food:</h1>
+        </header>
+        <Searchbar yelp={Yelp.search}></Searchbar>
+      </div>
+      
      
      
      
