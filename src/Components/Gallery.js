@@ -12,7 +12,7 @@ function Gallery(props){
     let businesses=props.restaurants.businesses;
       for (let k in businesses ){
           console.log (businesses[k]);
-          testArr.push(<GalleryElement key={businesses[k].id} alias={businesses[k].alias}></GalleryElement>)
+          testArr.push(<GalleryElement key={businesses[k].id} image_url={businesses[k].image_url} alias={businesses[k].alias}></GalleryElement>)
       
       }
     
