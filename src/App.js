@@ -1,5 +1,11 @@
 
 import { Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import Searchbar from './Components/Searchbar'
+import Gallery from './Components/Gallery'
+
+
+  
 
 const apiKey='O9bsGMTU-bFVTohrdL3E7bWnVANCxhmaV0cb_mMDbmMpPHGKIe9MD5hsO0-aTKTjQiNbiz1afN6Onpa39CLYk4Y0zOxhlXC7mwKGw1-a6GY3HWdFL3s3Jt6Rh2TDYXYx';
 
@@ -13,19 +19,38 @@ const Yelp = {
     }).then(response => {
       if (response){
         return response.json();
-      }c
+      }
       
+    }).then(response=>{
+      //console.log(response)
+      return response
     })
   }
 };
 
+const printKurwa=(rest)=>{
+  let elementy=[]
+ for(let i=0;i<rest.length;i++){
+  // console.log(rest[i]) 
+  elementy.push(<li key={rest[i].id}>{rest[i].alias}</li>)
+ }
+ return elementy
+}
+
 function App() {
+  const [restaurants, setRestaurants] = useState('');
+
   return (
     <div className="App">
       <header className="App-header">
        <h1>hello</h1>
       </header>
-     <Button onClick={()=>Yelp.search('food','pleszew').then(response=>console.log(response))} variant="primary">Button test</Button>
+      <Searchbar yelp={Yelp.search}></Searchbar>
+
+    
+     
+     
+     
     </div>
   );
 }
