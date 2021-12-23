@@ -28,14 +28,6 @@ const Yelp = {
   }
 };
 
-const printKurwa=(rest)=>{
-  let elementy=[]
- for(let i=0;i<rest.length;i++){
-  // console.log(rest[i]) 
-  elementy.push(<li key={rest[i].id}>{rest[i].alias}</li>)
- }
- return elementy
-}
 
 function App() {
   const [restaurants, setRestaurants] = useState('');
