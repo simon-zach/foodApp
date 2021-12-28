@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import Searchbar from './Components/Searchbar'
 import Gallery from './Components/Gallery'
 
-
-  
-
-const apiKey='O9bsGMTU-bFVTohrdL3E7bWnVANCxhmaV0cb_mMDbmMpPHGKIe9MD5hsO0-aTKTjQiNbiz1afN6Onpa39CLYk4Y0zOxhlXC7mwKGw1-a6GY3HWdFL3s3Jt6Rh2TDYXYx';
+const apiKey='vibNPblG6H--td0flpj-QZO9kPbtzTxpfHqBxPcI9YJVujFALMXgW6nxz8LYJd4T7Md1VrN2QeHDg3KdlElwIA-ODUUXc7ghHLKMzg7y-xuraPWaLZegX1KmeS_KYXYx';
 
 const Yelp = {
   search(term, location, sortBy) {
@@ -21,16 +18,14 @@ const Yelp = {
         return response.json();
       }
       
-    }).then(response=>{
-      //console.log(response)
-      return response
     })
+
   }
 };
 
 
 function App() {
-  const [restaurants, setRestaurants] = useState('');
+  
 
   return (
     <div className="App">
@@ -38,7 +33,7 @@ function App() {
         <header className="App-header">
         <h1>Find your food:</h1>
         </header>
-        <Searchbar yelp={Yelp.search}></Searchbar>
+        <Searchbar yelpCallback={Yelp.search}></Searchbar>
       </div>
       
      
