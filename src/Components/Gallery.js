@@ -1,7 +1,7 @@
 
-import React,{useEffect, useState} from "react";
+import React from "react";
 import GalleryElement from "./GalleryElement"
-import Message from "./Message";
+
 
 function Gallery(props){
 
@@ -38,7 +38,7 @@ function Gallery(props){
       }
     else{
       return(
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-sm-3 g-4">
               {result}
             </div>
         )
