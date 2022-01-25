@@ -12,8 +12,8 @@ See docs (https://www.yelp.com/developers/documentation/v3/get_started)
 Clone repository and change API key in fetch function. Api key has to be created at yelp website.
 
 In App.js API key should be send in fetch as below.
-
-`const Yelp = {
+```
+const Yelp = {
   search(term, location, sortBy) {
     return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`, {
       headers: {
@@ -25,8 +25,8 @@ In App.js API key should be send in fetch as below.
       }
     })
   }
-};`
-      
+};
+```      
  Please note that link contains cors-anywhere.
  
  Use CORS Anywhere which helps with accessing data from other websites that is normally forbidden by the same origin policy of web browsers.      
