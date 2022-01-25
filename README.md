@@ -1,10 +1,24 @@
-# Getting Started with Create React App
+# Food App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was create to present REST API functionality in react.
+Project use YELP Fusion API
 
-## Available Scripts
+The Yelp Fusion API allows you to get the best local content and user reviews from millions of businesses across 32 countries. This tutorial provides an overview of the capabilities our suite of APIs offer, provides instructions for how to authenticate API calls, and walks through a simple scenario using the API.
 
-In the project directory, you can run:
+See docs (https://www.yelp.com/developers/documentation/v3/get_started)
+
+## How to run?
+
+Clone repository and change API key in fetch function. Api key has to be created at yelp website.
+
+fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`, {
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+      }
+      
+ Use CORS Anywhere which helps with accessing data from other websites that is normally forbidden by the same origin policy of web browsers.      
+ 
+ Go here  https://cors-anywhere.herokuapp.com/corsdemo and get access to demo server to run app on your localhost.
 
 ### `npm start`
 
