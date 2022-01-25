@@ -13,11 +13,21 @@ Clone repository and change API key in fetch function. Api key has to be created
 
 In App.js API key should be send in fetch as below.
 
-`fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`, {
+`const Yelp = {
+  search(term, location, sortBy) {
+    return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
-      }`
- Plese note that link contains cors-anywhere.
+      }
+    }).then(response => {
+      if (response){
+        return response.json();
+      }
+    })
+  }
+};`
+      
+ Please note that link contains cors-anywhere.
  
  Use CORS Anywhere which helps with accessing data from other websites that is normally forbidden by the same origin policy of web browsers.      
  
