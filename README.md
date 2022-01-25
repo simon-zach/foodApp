@@ -11,7 +11,7 @@ See docs (https://www.yelp.com/developers/documentation/v3/get_started)
 
 Clone repository and change API key in fetch function. Api key has to be created at yelp website.
 
-In App.js API key should be send in fetch as below.
+In Yelp.js API key should be send in fetch as below.
 ```
 const Yelp = {
   search(term, location, sortBy) {
