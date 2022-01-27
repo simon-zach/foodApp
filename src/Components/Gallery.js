@@ -13,7 +13,7 @@ function Gallery(props){
           galleryArray.push(<GalleryElement key={businesses[k].id} rating={businesses[k].rating}  city={businesses[k].location.city} address1={businesses[k].location.address1}  image_url={businesses[k].image_url} alias={businesses[k].alias} name={businesses[k].name} display_phone={businesses[k].display_phone}></GalleryElement>)
         }
       }
-      if(galleryArray===undefined || !galleryArray || galleryArray.length===0){
+      if(!galleryArray || galleryArray.length===0){
         return false
       }else{
         return galleryArray

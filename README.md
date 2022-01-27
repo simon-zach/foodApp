@@ -1,6 +1,6 @@
 # Food App
 
-This project was create to present REST API functionality in react.
+This project was created to present REST API functionality in react.
 Project use YELP Fusion API
 
 The Yelp Fusion API allows you to get the best local content and user reviews from millions of businesses across 32 countries. Link above guides to tutorial which provides an overview of the capabilities of API.
